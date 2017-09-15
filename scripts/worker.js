@@ -1,8 +1,8 @@
 // constants
 const TOTAL_COLUMNS = 7;
-const TOTAL_ROWS = 7;
-const HUMAN_WIN_SCORE = -5;
-const COMPUTER_WIN_SCORE =5;
+const TOTAL_ROWS = 7; 
+const HUMAN_WIN_SCORE = -4;
+const COMPUTER_WIN_SCORE =4;
 const NO_WIN_SCORE = 0;
 
 // global variables
@@ -72,7 +72,7 @@ GameState.prototype.checkRuns = function(player, col, row, colStep, rowStep) {
       if (runCount === 4) {
         // winning run, step backwards to find the chips that make up this run
         this.winningChips = [];
-        for(var backstep = step; backstep >= step - 4; backstep--) {
+        for(var backstep = step; backstep >= step - 3; backstep--) {
           this.winningChips.push({
             col: col + backstep * colStep,
             row: row + backstep * rowStep
