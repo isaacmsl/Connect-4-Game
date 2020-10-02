@@ -37,7 +37,8 @@ var currentGameState;
 
 // document ready
 $(function() {
-  $('.start button').on('click', startGame);
+  $('#startGameBtn').on('click', startGame);
+  $('#joinGameBtn').on('click', () => {});
   setBlurb('start');
   setOutlook();
   
