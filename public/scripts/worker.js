@@ -107,7 +107,7 @@ GameState.prototype.isWin = function() {
 self.addEventListener('message', function(e) {
   switch(e.data.messageType) {
     case 'reset':
-      resetGame();
+      resetGame();zz
       break;
     case 'human-move':
       makeHumanMove(e.data.col);
